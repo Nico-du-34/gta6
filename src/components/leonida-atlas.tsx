@@ -3,7 +3,6 @@ import {useMemo,useRef,useState} from "react";
 import type {PointerEvent} from "react";
 import {useTranslations} from "next-intl";
 import {Search,Plus,Minus,LocateFixed,MapPin,ArrowUpRight} from "lucide-react";
-import "./atlas.css";
 const regions=[
  {id:"viceCity",name:"Vice City",x:725,y:245},
  {id:"keys",name:"Leonida Keys",x:775,y:485},
