@@ -58,7 +58,22 @@
     "subtitle": "O mapa comunitário do universo GTA VI",
     "soon": "O mapa interativo detalhado chegará em breve.",
     "legend": "Lugares para descobrir",
-    "search": "Buscar um local…"
+    "search": "Buscar um local…",
+    "zoomIn": "Aumentar zoom",
+    "zoomOut": "Diminuir zoom",
+    "reset": "Redefinir visualização",
+    "selected": "Destino selecionado",
+    "confirmed": "Nomeado pela Rockstar",
+    "noResults": "Nenhum destino corresponde à pesquisa.",
+    "note": "Atlas comunitário ilustrativo, sem escala. Os seis nomes vêm de material oficial; a Rockstar não publicou suas posições exatas.",
+    "regionDescriptions": {
+      "viceCity": "Uma grande metrópole costeira inspirada em Miami, com praias, bairros densos, arranha-céus e vida noturna.",
+      "keys": "Uma cadeia tropical de ilhas baixas, pontes, marinas e vias navegáveis.",
+      "grassrivers": "Vastas zonas úmidas, pântanos, manguezais e rios rasos.",
+      "portGellhorn": "Uma cidade costeira menor, com motéis, estradas comerciais e indústria à beira-mar.",
+      "ambrosia": "Uma região interior rural e industrial, cortada por estradas e áreas de trabalho.",
+      "mountKalaga": "Um parque nacional montanhoso e arborizado, com terrenos acidentados e cursos d'água rochosos."
+    }
   },
   "blog": {
     "title": "O JORNAL DE LEONIDA",
