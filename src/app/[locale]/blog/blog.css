@@ -1,3 +1,17 @@
-.blog-stories{margin-top:62px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.blog-story{min-height:450px;background:#101615;border:1px solid rgba(215,231,160,.13);display:flex;flex-direction:column;transition:transform .28s,border-color .28s}.blog-story:hover{transform:translateY(-6px);border-color:rgba(215,231,160,.48)}.blog-story-image{height:220px;position:relative;background-size:cover;background-position:center}.blog-story-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,12,.72),transparent 60%)}.blog-story-number{position:absolute;z-index:1;top:17px;left:18px;color:#f0f0e6;font:700 11px 'Barlow Condensed',Impact,sans-serif;letter-spacing:2px}.blog-story-body{padding:23px 21px 21px;display:flex;flex-direction:column;flex:1}.blog-story-meta{font-size:8px;color:#d7e7a0;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}.blog-story-body h2{font:800 31px/.98 'Barlow Condensed',Impact,sans-serif;text-transform:uppercase;margin:17px 0 12px}.blog-story-body p{margin:0;color:#a9b1a5;font-size:10px;line-height:1.85}.blog-story-link{margin-top:auto;padding-top:23px;display:flex;align-items:center;gap:10px;color:#d7e7a0;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.blog-story-link svg{transition:transform .2s}.blog-story:hover .blog-story-link svg{transform:translate(3px,-3px)}.blog-footnote{margin-top:25px;color:#7e887c;font-size:9px;line-height:1.8}
-@media(max-width:900px){.blog-stories{grid-template-columns:1fr 1fr}.blog-story:last-child{grid-column:span 2;min-height:370px}.blog-story:last-child .blog-story-image{height:180px}}
-@media(max-width:640px){.blog-stories{grid-template-columns:1fr;gap:11px;margin-top:43px}.blog-story,.blog-story:last-child{grid-column:auto;min-height:0}.blog-story-image{height:210px}.blog-story-body{min-height:225px}.blog-story:last-child .blog-story-image{height:210px}}
+.blog-stories{margin-top:58px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.blog-story{min-height:460px;background:#151514;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .25s,background .25s}
+.blog-story:hover{transform:translateY(-5px);border-color:rgba(227,86,56,.65);background:#1b1a18}
+.blog-story-image{height:230px;position:relative;background-size:cover;background-position:center;filter:grayscale(.24) saturate(.78);transition:filter .45s,transform .8s}
+.blog-story:hover .blog-story-image{filter:grayscale(0) saturate(1);transform:scale(1.025)}
+.blog-story-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,9,8,.8),transparent 66%)}
+.blog-story-number{position:absolute;z-index:1;top:16px;left:17px;color:#fff;font:800 10px var(--display);letter-spacing:1.8px}
+.blog-story-body{padding:22px 21px 21px;display:flex;flex-direction:column;flex:1}
+.blog-story-meta{font-size:8px;color:var(--accent);font-weight:800;letter-spacing:1.45px;text-transform:uppercase}
+.blog-story-body h2{font:900 32px/.92 var(--display);text-transform:uppercase;letter-spacing:-.01em;margin:16px 0 12px;color:#f0eee8}
+.blog-story-body p{margin:0;color:#a6a49c;font-size:10px;line-height:1.85}
+.blog-story-link{margin-top:auto;padding-top:23px;display:flex;align-items:center;gap:10px;color:#f0785a;font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.blog-story-link svg{transition:transform .2s}
+.blog-story:hover .blog-story-link svg{transform:translate(4px,-3px)}
+.blog-footnote{margin-top:25px;color:#77766f;font-size:9px;line-height:1.8}
+@media(max-width:900px){.blog-stories{grid-template-columns:1fr 1fr}.blog-story:last-child{grid-column:span 2;min-height:390px}.blog-story:last-child .blog-story-image{height:190px}}
+@media(max-width:640px){.blog-stories{grid-template-columns:1fr;gap:10px;margin-top:42px}.blog-story,.blog-story:last-child{grid-column:auto;min-height:0}.blog-story-image,.blog-story:last-child .blog-story-image{height:215px}.blog-story-body{min-height:220px}}
