@@ -1,5 +1,6 @@
 "use client";
 import {useMemo,useRef,useState} from "react";
+import type {PointerEvent} from "react";
 import {useTranslations} from "next-intl";
 import {Search,Plus,Minus,LocateFixed,MapPin,ArrowUpRight} from "lucide-react";
 import "./atlas.css";
@@ -19,8 +20,8 @@ export function LeonidaAtlas(){
  const [offset,setOffset]=useState({x:0,y:0});
  const drag=useRef({x:0,y:0,originX:0,originY:0,active:false});
  const visible=useMemo(()=>regions.filter(r=>r.name.toLowerCase().includes(query.trim().toLowerCase())),[query]);
- const active=regions.find(r=>r.id===selected)??regions[0];
- function startDrag(e:React.PointerEvent<HTMLDivElement>){if((e.target as HTMLElement).closest("[data-pin]"))return;drag.current={x:e.clientX,y:e.clientY,originX:offset.x,originY:offset.y,active:true};e.currentTarget.setPointerCapture(e.pointerId);}
+ const active=visible.find(r=>r.id===selected)??visible[0]??regions[0];
+ function startDrag(e:PointerEvent<HTMLDivElement>){if((e.target as HTMLElement).closest("[data-pin]"))return;drag.current={x:e.clientX,y:e.clientY,originX:offset.x,originY:offset.y,active:true};e.currentTarget.setPointerCapture(e.pointerId);}
  function moveDrag(e:React.PointerEvent<HTMLDivElement>){if(!drag.current.active)return;setOffset({x:drag.current.originX+e.clientX-drag.current.x,y:drag.current.originY+e.clientY-drag.current.y});}
  function stopDrag(){drag.current.active=false;}
  return <div className="atlas">
@@ -30,7 +31,7 @@ export function LeonidaAtlas(){
   </div>
   <div className="atlas-layout">
    <div className="atlas-viewport" onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag}>
-    <svg className="atlas-svg" viewBox="0 0 1000 620" role="img" aria-label={t("title")} style={{transform:"translate("+offset.x+"px,"+offset.y+"px) scale("+zoom+")"}}>
+    <svg className="atlas-svg" viewBox="0 0 1000 620" role="group" aria-label={t("title")} style={{transform:"translate("+offset.x+"px,"+offset.y+"px) scale("+zoom+")"}}>
      <defs>
       <linearGradient id="land" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stopColor="#52664f"/><stop offset="52%" stopColor="#2e5146"/><stop offset="100%" stopColor="#193b36"/></linearGradient>
       <linearGradient id="water" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stopColor="#173537"/><stop offset="100%" stopColor="#102427"/></linearGradient>
