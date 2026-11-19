@@ -125,7 +125,9 @@
       "agriculture": "Landwirtschaft",
       "fictional": "Fiktiv",
       "service": "Dienstleistung"
-    }
+    },
+    "clickMarker": "Wähle einen Marker auf der Karte, um die Details anzuzeigen.",
+    "approximate": "Ungefähre Position"
   },
   "blog": {
     "title": "DAS LEONIDA-JOURNAL",
