@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Início",
+    "news": "Notícias",
+    "map": "Mapa",
+    "community": "Comunidade"
+  },
+  "hero": {
+    "eyebrow": "VICE CITY • O MUNDO É SEU",
+    "title": "BEM-VINDO A",
+    "city": "VICE CITY",
+    "description": "Sob o sol de Leonida, cada rua tem uma história. Descubra as novidades, explore o mapa e participe da comunidade.",
+    "primary": "Explorar o mapa",
+    "secondary": "Entrar no Discord"
+  },
+  "ticker": "LEONIDA • VICE CITY • THE KEYS • WELCOME TO THE SUNSHINE STATE",
+  "sections": {
+    "discover": "EXPLORE O TERRITÓRIO",
+    "discoverSub": "Um estado, mil maneiras de descobrir.",
+    "news": "ÚLTIMAS NOTÍCIAS",
+    "newsSub": "As histórias de que Leonida está falando.",
+    "community": "A COMUNIDADE",
+    "communitySub": "Sua próxima aventura começa aqui.",
+    "mapCta": "Explorar o mapa",
+    "allNews": "Todas as notícias",
+    "discord": "Entrar no Discord",
+    "read": "Ler história"
+  },
+  "cards": {
+    "map": "O mapa de Leonida",
+    "mapText": "Explore locais conhecidos e pontos de interesse do universo GTA VI.",
+    "news": "O jornal de Vice City",
+    "newsText": "Anúncios, análises e notícias da comunidade.",
+    "community": "Seu lugar é aqui",
+    "communityText": "Compartilhe descobertas e conecte-se com outros fãs."
+  },
+  "footer": {
+    "about": "Um hub comunitário independente dedicado ao universo Grand Theft Auto VI.",
+    "links": "Navegação",
+    "legal": "Legal",
+    "privacy": "Privacidade",
+    "cookies": "Preferências de cookies",
+    "disclaimer": "Este é um projeto independente de fãs e não é afiliado nem endossado pela Rockstar Games ou Take-Two Interactive."
+  },
+  "cookie": {
+    "title": "Sua privacidade importa",
+    "text": "Usamos apenas cookies essenciais. Cookies de análise e personalização só serão ativados com seu consentimento.",
+    "accept": "Aceitar tudo",
+    "reject": "Rejeitar tudo",
+    "settings": "Personalizar",
+    "save": "Salvar preferências",
+    "necessary": "Essenciais (sempre ativos)",
+    "analytics": "Análise",
+    "marketing": "Personalização"
+  },
+  "map": {
+    "title": "EXPLORE LEONIDA",
+    "subtitle": "O mapa comunitário do universo GTA VI",
+    "soon": "O mapa interativo detalhado chegará em breve.",
+    "legend": "Lugares para descobrir",
+    "search": "Buscar um local…"
+  },
+  "blog": {
+    "title": "O JORNAL DE LEONIDA",
+    "subtitle": "Notícias, descobertas e histórias da comunidade.",
+    "empty": "As primeiras histórias chegarão em breve."
+  }
+}
