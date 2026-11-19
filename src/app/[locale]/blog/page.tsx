@@ -1,0 +1,4 @@
+import {getTranslations} from "next-intl/server";
+import type {Metadata} from "next";
+export async function generateMetadata():Promise<Metadata>{return {title:"Actualités"};}
+export default async function BlogPage(){const t=await getTranslations();return <section className="subpage"><div className="subpage-cover blog-cover"/><div className="subpage-inner"><span className="eyebrow">THE DAILY — LEONIDA</span><h1>{t("blog.title")}</h1><p className="subpage-lead">{t("blog.subtitle")}</p><div className="empty-state"><span className="empty-icon">✳</span><p>{t("blog.empty")}</p><span className="muted">STORIES ARE BEING DEVELOPED</span></div></div></section>;}
