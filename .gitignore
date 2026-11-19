@@ -8,3 +8,7 @@ dist/
 *.log
 .DS_Store
 .vercel
+
+# Generated from pinned public GTADB / YANIS sources during dev and production builds
+/public/data/*.json
+/public/data/*.svg
