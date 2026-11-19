@@ -78,6 +78,17 @@
   "blog": {
     "title": "DAS LEONIDA-JOURNAL",
     "subtitle": "Neuigkeiten, Entdeckungen und Community-Geschichten.",
-    "empty": "Die ersten Artikel folgen in Kürze."
+    "empty": "Die ersten Artikel folgen in Kürze.",
+    "latest": "NEUESTE GESCHICHTEN",
+    "newsTag": "ROCKSTAR NEWSWIRE",
+    "guideTag": "COMMUNITY-REISEFÜHRER",
+    "communityTag": "COMMUNITY",
+    "galleryTitle": "Die Launch-Galerie ist jetzt online",
+    "galleryDescription": "Rockstar zeigt in der offiziellen Galerie neue Einblicke in Vice City und die anderen Regionen von Leonida.",
+    "regionsTitle": "Sechs Reiseziele zum Entdecken",
+    "regionsDescription": "Von den Straßen von Vice City über die Keys bis zu den Feuchtgebieten von Grassrivers: Entdecke die in Rockstar-Medien genannten Orte.",
+    "communityTitle": "Hier beginnt die Community",
+    "communityDescription": "Tritt Discord bei und teile Beobachtungen, Entdeckungen und Neuigkeiten mit anderen Fans.",
+    "read": "Entdecken"
   }
 }
