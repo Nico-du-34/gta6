@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {NextIntlClientProvider, hasLocale} from "next-intl";
+import {NextIntlClientProvider,hasLocale} from "next-intl";
 import {getMessages} from "next-intl/server";
 import {notFound} from "next/navigation";
 import {routing} from "@/i18n/routing";
@@ -10,7 +10,6 @@ import {CookieConsent} from "@/components/cookie-consent";
 export const metadata:Metadata={
   title:{default:"Leonida — GTA VI Community",template:"%s — Leonida"},
   description:"Explorez Vice City et Leonida. Actualités, carte communautaire et espace dédié à Grand Theft Auto VI.",
-  metadataBase:new URL("https://gta6.example.com"),
   openGraph:{title:"Leonida — GTA VI Community",description:"The streets of Leonida are calling.",type:"website"}
 };
 export function generateStaticParams(){return routing.locales.map(locale=>({locale}));}

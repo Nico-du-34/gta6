@@ -1,5 +1,5 @@
-import type { NextConfig } from "next";
-const nextConfig: NextConfig = {
-  images: { remotePatterns: [{ protocol: "images.unsplash.com", hostname: "images.unsplash.com" }, { protocol: "https", hostname: "media-rockstargames-com.akamaized.net" }] }
-};
-export default nextConfig;
+import createNextIntlPlugin from "next-intl/plugin";
+import type {NextConfig} from "next";
+const withNextIntl=createNextIntlPlugin("./src/i18n/request.ts");
+const nextConfig:NextConfig={};
+export default withNextIntl(nextConfig);
