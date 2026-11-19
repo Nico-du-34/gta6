@@ -2,12 +2,17 @@
   "name": "gta6-community",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=20.9.0" },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predev": "node scripts/sync-map-data.mjs",
+    "prebuild": "node scripts/sync-map-data.mjs",
+    "map:sync": "node scripts/sync-map-data.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
@@ -19,7 +24,8 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "three": "^0.172.0",
-    "zustand": "^5.0.0"
+    "zustand": "^5.0.0",
+    "leaflet": "^1.9.4"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -28,6 +34,7 @@
     "@types/three": "^0.172.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.4.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "@types/leaflet": "^1.9.21"
   }
 }
