@@ -4,19 +4,25 @@ import {useTranslations} from "next-intl";
 type Consent={necessary:true;analytics:boolean;marketing:boolean;updatedAt:string};
 const KEY="leonida-cookie-consent-v1";
 const MAX_AGE=180*24*60*60*1000;
+function readConsent():Consent|null{
+ try{
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return null;
+  const saved=JSON.parse(raw) as Consent;
+  const age=Date.now()-Date.parse(saved.updatedAt);
+  const valid=saved.necessary===true&&typeof saved.analytics==="boolean"&&typeof saved.marketing==="boolean"&&Number.isFinite(age)&&age>=0&&age<MAX_AGE;
+  if(!valid){localStorage.removeItem(KEY);return null;}
+  return saved;
+ }catch{return null;}
+}
 export function CookieConsent(){const t=useTranslations("cookie");const [visible,setVisible]=useState(false);const [settings,setSettings]=useState(false);const [analytics,setAnalytics]=useState(false);const [marketing,setMarketing]=useState(false);
- // Browser preferences can only be read after hydration; synchronize once with localStorage.
- // eslint-disable-next-line react-hooks/set-state-in-effect
  useEffect(()=>{
-  try{
-   const raw=localStorage.getItem(KEY);
-   if(raw){
-    const saved=JSON.parse(raw) as Consent;
-    const valid=saved.necessary===true&&typeof saved.analytics==="boolean"&&typeof saved.marketing==="boolean"&&Number.isFinite(Date.parse(saved.updatedAt))&&Date.now()-Date.parse(saved.updatedAt)<MAX_AGE;
-    if(valid){setAnalytics(saved.analytics);setMarketing(saved.marketing);}else{localStorage.removeItem(KEY);setVisible(true);}
-   }else setVisible(true);
-  }catch{setVisible(true);}
-  const open=()=>{setSettings(true);setVisible(true);};
+  // localStorage is available only after hydration. Show consent only when no valid choice exists.
+  if(!readConsent()){
+   // eslint-disable-next-line react-hooks/set-state-in-effect
+   setVisible(true);
+  }
+  const open=()=>{const saved=readConsent();setAnalytics(saved?.analytics??false);setMarketing(saved?.marketing??false);setSettings(true);setVisible(true);};
   window.addEventListener("open-cookie-settings",open);
   return()=>window.removeEventListener("open-cookie-settings",open);
  },[]);
