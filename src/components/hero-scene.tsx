@@ -1,7 +1,0 @@
-"use client";
-import {Canvas,useFrame} from "@react-three/fiber";
-import {Float,MeshDistortMaterial} from "@react-three/drei";
-import {useRef} from "react";
-import type {Mesh} from "three";
-function SceneObjects(){const sun=useRef<Mesh|null>(null);const ring=useRef<Mesh|null>(null);useFrame((state,delta)=>{if(sun.current){sun.current.rotation.y+=delta*.12;sun.current.rotation.x=Math.sin(state.clock.elapsedTime*.16)*.08;}if(ring.current){ring.current.rotation.z+=delta*.045;}});return <><Float speed={1.1} rotationIntensity={.16} floatIntensity={.3}><mesh ref={sun} position={[0,0,0]}><icosahedronGeometry args={[1.65,5]}/><MeshDistortMaterial color="#d9e5a2" roughness={.28} metalness={.65} distort={.24} speed={1.4}/></mesh></Float><mesh ref={ring} rotation={[1.15,.2,.25]}><torusGeometry args={[2.2,.012,12,180]}/><meshBasicMaterial color="#f2edcf" transparent opacity={.7}/></mesh><mesh rotation={[.3,.8,-.4]}><torusGeometry args={[2.55,.006,8,180]}/><meshBasicMaterial color="#d9e5a2" transparent opacity={.35}/></mesh></>;}
-export function HeroScene(){return <div className="hero-3d" aria-hidden="true"><Canvas dpr={[1,1.5]} camera={{position:[0,0,7],fov:38}} gl={{alpha:true,antialias:true}}><ambientLight intensity={1.2}/><pointLight position={[3,3,5]} intensity={22} color="#f3efcf"/><pointLight position={[-4,-2,-2]} intensity={8} color="#c4db89"/><SceneObjects/></Canvas></div>;}
