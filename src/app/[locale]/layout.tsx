@@ -4,6 +4,7 @@ import {getMessages} from "next-intl/server";
 import {notFound} from "next/navigation";
 import {routing} from "@/i18n/routing";
 import "../globals.css";
+import "leaflet/dist/leaflet.css";
 import {SiteHeader} from "@/components/site-header";
 import {SiteFooter} from "@/components/site-footer";
 import {CookieConsent} from "@/components/cookie-consent";
