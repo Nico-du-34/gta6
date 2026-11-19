@@ -22,7 +22,7 @@ export default async function Home(){
     <p className="hero-description">{t("hero.description")}</p>
     <div className="hero-actions"><Link className="button button-light" href="/map">{t("hero.primary")} <ArrowUpRight size={16}/></Link><a className="button button-ghost" href="https://discord.gg/N2rDUN6ex" target="_blank" rel="noreferrer">{t("hero.secondary")} <ArrowUpRight size={16}/></a></div>
    </div>
-   <div className="hero-bottom"><span>26°07' N — 80°08' W</span><span className="scroll-cue"><ArrowDown size={14}/> SCROLL TO DISCOVER</span><span>LEONIDA, USA</span></div>
+   <div className="hero-bottom"><span>26°07&apos; N — 80°08&apos; W</span><span className="scroll-cue"><ArrowDown size={14}/> SCROLL TO DISCOVER</span><span>LEONIDA, USA</span></div>
   </section>
   <div className="ticker"><div className="ticker-track">{Array.from({length:4}).map((_,i)=><span key={i}>{t("ticker")} <b>✳</b> </span>)}</div></div>
   <section className="section intro-section"><div className="section-index">01 / THE EXPERIENCE</div><div className="intro-copy"><span className="eyebrow">A COMMUNITY FIELD GUIDE</span><h2>{t("sections.discover")}</h2><p>{t("sections.discoverSub")}</p></div><div className="intro-mark">VI<span>.</span></div></section>
