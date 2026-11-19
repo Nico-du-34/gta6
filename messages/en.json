@@ -125,7 +125,9 @@
       "agriculture": "Agriculture",
       "fictional": "Fictional",
       "service": "Service"
-    }
+    },
+    "clickMarker": "Select a marker on the map to view its details.",
+    "approximate": "Approximate position"
   },
   "blog": {
     "title": "THE LEONIDA JOURNAL",
