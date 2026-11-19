@@ -90,5 +90,35 @@
     "communityTitle": "The community starts here",
     "communityDescription": "Join the Discord to share your observations, discoveries and latest news with fellow fans.",
     "read": "Discover"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "notice": "Initial version — complete the publisher identity, GDPR contact details and hosting information before production.",
+    "publisherTitle": "Data controller",
+    "publisherText": "The website publisher is the data controller. Add the publisher's legal identity, postal address and a working contact channel in the legal notice before public launch.",
+    "dataTitle": "Personal data",
+    "dataText": "This version has no accounts, forms or member area. It therefore does not intentionally collect personal data through those features. The hosting provider may retain technical logs under its own legal obligations and retention policy.",
+    "cookiesTitle": "Cookies and preferences",
+    "cookiesText": "Cookie choices are stored in the browser's local storage. No advertising tools, marketing pixels or analytics services are loaded in this version. Non-essential categories must only be activated after consent.",
+    "rightsTitle": "Your rights",
+    "rightsText": "Under GDPR, you may exercise your rights of access, rectification, erasure, restriction and objection where applicable. Add a valid contact address to receive and process these requests.",
+    "thirdTitle": "Third-party content",
+    "thirdText": "Grand Theft Auto VI names, trademarks and artwork belong to their respective rights holders. Official media remains the property of Rockstar Games / Take-Two Interactive. This independent project is not affiliated with or endorsed by those companies.",
+    "updateTitle": "Updates",
+    "updateText": "Last revised: November 2026. Keep this page accurate for the services and processing activities actually used."
+  },
+  "legal": {
+    "title": "Legal notice",
+    "notice": "Required fields to complete before publishing. Replace each bracketed instruction with accurate information about your business.",
+    "publisherTitle": "Website publisher",
+    "publisherText": "Name or company: [to be completed] · Address: [to be completed] · Email: [to be completed] · Publication director: [to be completed].",
+    "hostingTitle": "Hosting provider",
+    "hostingText": "Provider: [hosting company] · Address: [full address] · Website: [URL] · Contact: [details].",
+    "purposeTitle": "Website purpose",
+    "purposeText": "Leonida Community Archive is an independent community project dedicated to the Grand Theft Auto VI universe: news, destination guides and fan discussion.",
+    "propertyTitle": "Intellectual property",
+    "propertyText": "Grand Theft Auto, GTA VI, Vice City, characters, marks and related artwork belong to their respective owners. Official visuals are credited to Rockstar Games and remain subject to their owners' rights.",
+    "independence": "This is an independent fan project. It is not affiliated with, sponsored by, or endorsed by Rockstar Games or Take-Two Interactive.",
+    "updated": "Last updated: November 2026."
   }
 }
