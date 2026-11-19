@@ -125,7 +125,9 @@
       "agriculture": "Agricoltura",
       "fictional": "Fittizio",
       "service": "Servizio"
-    }
+    },
+    "clickMarker": "Seleziona un indicatore sulla mappa per visualizzarne i dettagli.",
+    "approximate": "Posizione approssimativa"
   },
   "blog": {
     "title": "IL GIORNALE DI LEONIDA",
