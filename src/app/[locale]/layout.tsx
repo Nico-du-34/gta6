@@ -8,6 +8,7 @@ import "leaflet/dist/leaflet.css";
 import {SiteHeader} from "@/components/site-header";
 import {SiteFooter} from "@/components/site-footer";
 import {CookieConsent} from "@/components/cookie-consent";
+import {MotionReveals} from "@/components/motion-reveals";
 export const metadata:Metadata={
   title:{default:"Leonida — GTA VI Community",template:"%s — Leonida"},
   description:"Explorez Vice City et Leonida. Actualités, carte communautaire et espace dédié à Grand Theft Auto VI.",
@@ -18,5 +19,5 @@ export default async function LocaleLayout({children,params}:{children:React.Rea
   const {locale}=await params;
   if(!hasLocale(routing.locales,locale))notFound();
   const messages=await getMessages();
-  return <html lang={locale}><body><NextIntlClientProvider messages={messages}><SiteHeader/><main>{children}</main><SiteFooter/><CookieConsent/></NextIntlClientProvider></body></html>;
+  return <html lang={locale}><body><NextIntlClientProvider messages={messages}><MotionReveals/><SiteHeader/><main>{children}</main><SiteFooter/><CookieConsent/></NextIntlClientProvider></body></html>;
 }
