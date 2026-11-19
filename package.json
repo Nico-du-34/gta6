@@ -15,15 +15,12 @@
     "map:sync": "node scripts/sync-map-data.mjs"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.9",
-    "@react-three/fiber": "^9.8.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.468.0",
     "next": "^16.4.6",
     "next-intl": "^4.15.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "three": "^0.172.0",
     "zustand": "^5.0.0",
     "leaflet": "^1.9.4"
   },
@@ -31,7 +28,6 @@
     "@types/node": "^22.10.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "@types/three": "^0.172.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.4.6",
     "typescript": "^5.9.3",
