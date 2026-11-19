@@ -1,0 +1,4 @@
+import {getTranslations} from "next-intl/server";
+import type {Metadata} from "next";
+export async function generateMetadata():Promise<Metadata>{const t=await getTranslations("legal");return {title:t("title")};}
+export default async function LegalPage(){const t=await getTranslations("legal");return <article className="legal-page"><span className="eyebrow">LEONIDA — LEGAL</span><h1>{t("title").toUpperCase()}</h1><p className="legal-note">{t("notice")}</p><h2>01 — {t("publisherTitle")}</h2><p>{t("publisherText")}</p><h2>02 — {t("hostingTitle")}</h2><p>{t("hostingText")}</p><h2>03 — {t("purposeTitle")}</h2><p>{t("purposeText")}</p><h2>04 — {t("propertyTitle")}</h2><p>{t("propertyText")}</p><p className="legal-note">{t("independence")}</p><p>{t("updated")}</p></article>;}
