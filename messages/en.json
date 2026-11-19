@@ -78,6 +78,17 @@
   "blog": {
     "title": "THE LEONIDA JOURNAL",
     "subtitle": "News, discoveries and community stories.",
-    "empty": "The first stories are coming soon."
+    "empty": "The first stories are coming soon.",
+    "latest": "LATEST STORIES",
+    "newsTag": "ROCKSTAR NEWSWIRE",
+    "guideTag": "COMMUNITY FIELD GUIDE",
+    "communityTag": "COMMUNITY",
+    "galleryTitle": "The launch gallery is now live",
+    "galleryDescription": "Rockstar brings together new looks at Vice City and the other regions of Leonida in its official gallery.",
+    "regionsTitle": "Six destinations to explore",
+    "regionsDescription": "From the streets of Vice City to the Keys and the Grassrivers wetlands, discover the destinations named in Rockstar media.",
+    "communityTitle": "The community starts here",
+    "communityDescription": "Join the Discord to share your observations, discoveries and latest news with fellow fans.",
+    "read": "Discover"
   }
 }
