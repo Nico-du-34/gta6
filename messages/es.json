@@ -125,7 +125,9 @@
       "agriculture": "Agricultura",
       "fictional": "Ficticio",
       "service": "Servicio"
-    }
+    },
+    "clickMarker": "Selecciona un marcador en el mapa para ver sus detalles.",
+    "approximate": "Posición aproximada"
   },
   "blog": {
     "title": "EL DIARIO DE LEONIDA",
