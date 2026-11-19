@@ -1,7 +1,6 @@
 import {getTranslations} from "next-intl/server";
 import {ArrowDown,ArrowUpRight,Map,Newspaper,Users} from "lucide-react";
 import {Link} from "@/i18n/navigation";
-import {MotionReveals} from "@/components/motion-reveals";
 
 const artwork={
  hero:"https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_Beach_landscape.0419q._86ukpt.jpg?akim=1&imdensity=1&imwidth=3840",
@@ -13,7 +12,6 @@ const artwork={
 export default async function Home(){
  const t=await getTranslations();
  return <div className="home">
-  <MotionReveals/>
   <section className="hero">
    <div className="hero-backdrop" style={{backgroundImage:`linear-gradient(90deg,rgba(4,4,4,.84),rgba(4,4,4,.24) 68%),linear-gradient(0deg,#0d0d0c 0%,transparent 43%),url("${artwork.hero}")`}}/>
    <div className="hero-grain"/>
