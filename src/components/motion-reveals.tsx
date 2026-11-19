@@ -1,14 +1,15 @@
 "use client";
 import {useEffect} from "react";
+import {usePathname} from "@/i18n/navigation";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export function MotionReveals(){
+ const pathname=usePathname();
  useEffect(()=>{
   gsap.registerPlugin(ScrollTrigger);
   const context=gsap.context(()=>{
-   const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-   if(reduceMotion)return;
+   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
    const heroItems=gsap.utils.toArray<HTMLElement>('[data-reveal="hero"]');
    if(heroItems.length){
     const intro=gsap.timeline({defaults:{ease:"power4.out"}});
@@ -18,12 +19,18 @@ export function MotionReveals(){
     intro.fromTo(heroItems[3],{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.7},.7);
     intro.fromTo(heroItems[4],{autoAlpha:0,y:16},{autoAlpha:1,y:0,duration:.65},.82);
    }
-   gsap.utils.toArray<HTMLElement>('[data-reveal]:not([data-reveal="hero"])').forEach((element,index)=>{
-    const isCard=element.dataset.reveal==="card";
+   const revealTargets=[
+    ...gsap.utils.toArray<HTMLElement>('[data-reveal]:not([data-reveal="hero"])'),
+    ...gsap.utils.toArray<HTMLElement>(".subpage-inner > .eyebrow, .subpage-inner > h1, .subpage-inner > .subpage-lead"),
+    ...gsap.utils.toArray<HTMLElement>(".blog-story, .atlas-map-panel, .atlas-sidebar, .atlas-sources"),
+    ...gsap.utils.toArray<HTMLElement>(".legal-page > *")
+   ];
+   revealTargets.forEach((element,index)=>{
+    const isCard=element.matches('[data-reveal="card"],.blog-story');
     gsap.fromTo(element,
-     {autoAlpha:0,y:isCard?34:26,clipPath:isCard?"inset(0 0 7% 0)":"inset(0 0 0 0)"},
-     {autoAlpha:1,y:0,clipPath:"inset(0 0 0 0)",duration:isCard?.95:.78,ease:"power3.out",delay:isCard?(index%3)*.07:0,
-      scrollTrigger:{trigger:element,start:"top 86%",once:true}}
+     {autoAlpha:0,y:isCard?32:23,clipPath:isCard?"inset(0 0 6% 0)":"inset(0 0 0 0)"},
+     {autoAlpha:1,y:0,clipPath:"inset(0 0 0 0)",duration:isCard?.88:.72,ease:"power3.out",delay:isCard?(index%3)*.065:0,
+      scrollTrigger:{trigger:element,start:"top 88%",once:true}}
     );
    });
    const backdrop=document.querySelector<HTMLElement>(".hero-backdrop");
@@ -35,7 +42,7 @@ export function MotionReveals(){
     if(image)gsap.to(image,{yPercent:-4,ease:"none",scrollTrigger:{trigger:card,start:"top bottom",end:"bottom top",scrub:.55}});
    });
   });
-  return()=>context.revert();
- },[]);
+  return()=>{context.revert();ScrollTrigger.refresh();};
+ },[pathname]);
  return null;
 }
