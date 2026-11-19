@@ -90,5 +90,35 @@
     "communityTitle": "La communauté prend vie ici",
     "communityDescription": "Rejoignez le Discord pour partager vos observations, découvertes et actualités avec les autres passionnés.",
     "read": "Découvrir"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "notice": "Version initiale — à compléter avant la mise en production avec l’identité de l’éditeur, les coordonnées du contact RGPD et les informations de l’hébergeur.",
+    "publisherTitle": "Responsable du traitement",
+    "publisherText": "Le responsable du traitement est l’éditeur du site. Son identité, son adresse et son contact doivent être indiqués dans les mentions légales avant l’ouverture au public.",
+    "dataTitle": "Données personnelles",
+    "dataText": "Cette version ne propose ni compte, ni formulaire, ni espace membre. Le site ne collecte donc pas volontairement de données personnelles via ces fonctionnalités. L’hébergeur peut conserver des journaux techniques selon ses propres obligations et sa politique de conservation.",
+    "cookiesTitle": "Cookies et préférences",
+    "cookiesText": "Le choix relatif aux cookies est mémorisé dans le stockage local du navigateur. Aucun outil publicitaire, pixel marketing ou outil de mesure d’audience n’est chargé dans cette version. Les catégories non essentielles ne doivent être activées qu’après consentement.",
+    "rightsTitle": "Vos droits",
+    "rightsText": "Selon le RGPD, vous pouvez exercer vos droits d’accès, de rectification, d’effacement, de limitation et d’opposition lorsque ces droits s’appliquent. Ajoute une adresse de contact valide pour recevoir et traiter ces demandes.",
+    "thirdTitle": "Contenus tiers",
+    "thirdText": "Les marques, noms et visuels Grand Theft Auto VI appartiennent à leurs ayants droit. Les médias officiels restent la propriété de Rockstar Games / Take-Two Interactive. Ce projet indépendant n’est ni affilié, ni approuvé par ces sociétés.",
+    "updateTitle": "Mise à jour",
+    "updateText": "Dernière révision : novembre 2026. Cette page doit être tenue à jour en fonction des services réellement utilisés et des traitements réellement effectués."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "notice": "Champs à compléter obligatoirement avant publication. Remplace chaque indication entre crochets par les informations exactes de ton activité.",
+    "publisherTitle": "Éditeur du site",
+    "publisherText": "Nom ou raison sociale : [à renseigner] · Adresse : [à renseigner] · E-mail : [à renseigner] · Responsable de publication : [à renseigner].",
+    "hostingTitle": "Hébergement",
+    "hostingText": "Hébergeur : [nom de l’hébergeur] · Adresse : [adresse complète] · Site web : [URL] · Contact : [coordonnées].",
+    "purposeTitle": "Objet du site",
+    "purposeText": "Leonida Community Archive est un projet communautaire indépendant consacré à l’univers de Grand Theft Auto VI : actualités, guide de destinations et échanges entre fans.",
+    "propertyTitle": "Propriété intellectuelle",
+    "propertyText": "Grand Theft Auto, GTA VI, Vice City, les personnages, marques et visuels associés appartiennent à leurs propriétaires respectifs. Les visuels officiels sont crédités à Rockstar Games et restent soumis aux droits de leurs titulaires.",
+    "independence": "Ce site est un projet de fans indépendant. Il n’est ni affilié, ni sponsorisé, ni approuvé par Rockstar Games ou Take-Two Interactive.",
+    "updated": "Dernière mise à jour : novembre 2026."
   }
 }
