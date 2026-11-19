@@ -13,12 +13,12 @@ const OUTPUT_DIR=path.join(ROOT,"public","data");
 const OUTPUT_DATA=path.join(OUTPUT_DIR,"gtadb-landmarks.json");
 const OUTPUT_BASEMAP=path.join(OUTPUT_DIR,"leonida-basemap.svg");
 const uncertaintyPatterns=[
-  ["unconfirmed",/\\bun(?:confirmed|comfirmed)\\b/i],
-  ["may-not-exist",/\\bmay(?:-not-|not\\s+)exist\\b/i],
-  ["cancelled",/\\bcancelled\\b/i],
-  ["fictional",/\\bfictional\\b/i],
-  ["demolished",/\\bdemolished\\b/i],
-  ["duplicate",/\\bduplicate\\b/i]
+  ["unconfirmed",/\bun(?:confirmed|comfirmed)\b/i],
+  ["may-not-exist",/\bmay(?:-not-|not\s+)exist\b/i],
+  ["cancelled",/\bcancelled\b/i],
+  ["fictional",/\bfictional\b/i],
+  ["demolished",/\bdemolished\b/i],
+  ["duplicate",/\bduplicate\b/i]
 ];
 function pair(id,label,value){
   if(!Array.isArray(value))throw new Error(id+": "+label+" must be an array");
@@ -29,8 +29,15 @@ function pair(id,label,value){
 function normalize(source){
   if(!source||Array.isArray(source)||typeof source!=="object")throw new Error("GTADB source must be an object");
   const landmarks=Object.entries(source).map(([id,row])=>{
-    if(!/^L\\d+$/.test(id)||!Array.isArray(row)||row.length!==9)throw new Error("Invalid GTADB record "+id);
-    const [rawName,rawPosition,rawPhotoSize,realWorldAddress,realWorldCoordinates,realWorldPhotoSize,rawTags,rawColor,editedAt]=row;
+    if(!/^L\d+$/.test(id)||!Array.isArray(row)||row.length!==9)throw new Error("Invalid GTADB record "+id);
+    const rawName=row[0];
+    const rawPosition=row[1];
+    const rawPhotoSize=row[2];
+    const realWorldAddress=row[3];
+    const realWorldPhotoSize=row[5];
+    const rawTags=row[6];
+    const rawColor=row[7];
+    const editedAt=row[8];
     if(typeof rawName!=="string"||typeof realWorldAddress!=="string"||!Array.isArray(rawTags)||!rawTags.every(x=>typeof x==="string")||typeof rawColor!=="string"||!Array.isArray(editedAt)||editedAt.length!==3||!editedAt.every(Number.isFinite))throw new Error("Invalid GTADB fields for "+id);
     if(!Array.isArray(rawPhotoSize)||!Array.isArray(realWorldPhotoSize))throw new Error("Invalid photo-size fields for "+id);
     const position=pair(id,"inGameCoordinates",rawPosition);
@@ -87,7 +94,7 @@ const snapshot=normalize(JSON.parse(raw.toString("utf8")));
 const basemap=await download(BASEMAP_URL);
 const basemapText=basemap.toString("utf8");
 if(!basemapText.startsWith("<svg")||!basemapText.includes('viewBox="-32000 -24000 40000 40000"'))throw new Error("Unexpected YANIS basemap geometry; refusing to publish mismatched coordinates.");
-await writeFile(OUTPUT_DATA,JSON.stringify(snapshot,null,2)+"\\n","utf8");
+await writeFile(OUTPUT_DATA,JSON.stringify(snapshot,null,2)+"\n","utf8");
 await writeFile(OUTPUT_BASEMAP,basemap);
 console.log("Synced "+snapshot.counts.total+" GTADB locations ("+snapshot.counts.positioned+" positioned, "+snapshot.counts.unpositioned+" without coordinates).");
 console.log("Basemap: YANIS v16 / GTADB, pinned revision "+BASEMAP_REVISION+".");
