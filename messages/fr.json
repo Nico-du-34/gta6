@@ -125,7 +125,9 @@
       "agriculture": "Agriculture",
       "fictional": "Fictif",
       "service": "Service"
-    }
+    },
+    "clickMarker": "Cliquez sur un point de la carte pour afficher sa fiche.",
+    "approximate": "Position approximative"
   },
   "blog": {
     "title": "LE JOURNAL DE LEONIDA",
