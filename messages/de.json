@@ -58,7 +58,22 @@
     "subtitle": "Die Community-Karte des GTA-VI-Universums",
     "soon": "Die detaillierte interaktive Karte folgt in Kürze.",
     "legend": "Sehenswürdigkeiten",
-    "search": "Ort suchen…"
+    "search": "Ort suchen…",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "reset": "Ansicht zurücksetzen",
+    "selected": "Ausgewähltes Ziel",
+    "confirmed": "Von Rockstar benannt",
+    "noResults": "Keine Ziele für diese Suche gefunden.",
+    "note": "Schematischer Community-Atlas, nicht maßstabsgetreu. Die sechs Zielnamen stammen aus offiziellen Materialien; Rockstar hat ihre genauen Positionen nicht veröffentlicht.",
+    "regionDescriptions": {
+      "viceCity": "Eine große Küstenmetropole, inspiriert von Miami, mit Stränden, dichten Vierteln, Hochhäusern und Nachtleben.",
+      "keys": "Eine tropische Inselkette mit flachen Inseln, Brücken, Yachthäfen und Wasserwegen.",
+      "grassrivers": "Weitläufige Feuchtgebiete, Sümpfe, Mangroven und flache Flüsse.",
+      "portGellhorn": "Eine kleinere Küstenstadt mit Motels, Handelsstraßen und Hafenindustrie.",
+      "ambrosia": "Ein ländliches und industrielles Binnengebiet mit Straßen und Gewerbeflächen.",
+      "mountKalaga": "Ein bewaldeter Bergnationalpark mit rauem Gelände und felsigen Wasserläufen."
+    }
   },
   "blog": {
     "title": "DAS LEONIDA-JOURNAL",
